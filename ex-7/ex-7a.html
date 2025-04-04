@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>Window Object Example</title>
+
+</head>
+<body>
+
+    <h1>Window Object Demonstration</h1>
+    <button onclick="showAlert()">Show Alert</button>
+    <button onclick="showPrompt()">Show Prompt</button>
+    <button onclick="showConfirm()">Show Confirm</button>
+    <button onclick="openNewWindow()">Open New Window</button>
+  
+
+    <script>
+        function showAlert() {
+            window.alert("This is an alert message!");
+        }
+
+        function showPrompt() {
+            const userName = window.prompt("Please enter your name:");
+            if (userName !== null) {
+                window.alert("Hello, " + userName + "!");
+            }
+        }
+
+        function showConfirm() {
+            const userConfirmed = window.confirm("Do you want to proceed?");
+            if (userConfirmed) {
+                window.alert("You pressed OK!");
+            } else {
+                window.alert("You pressed Cancel!");
+            }
+        }
+
+        let newWindow;
+        function openNewWindow() {
+            newWindow = window.open("https://www.kottesandeep.blogspot.com", "_blank", "width=500,height=500");
+        }
+
+  
+    </script>
+
+</body>
+</html>

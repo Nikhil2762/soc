@@ -1,0 +1,17 @@
+<DOCTYPE html>
+<html lang=''en">
+<head>
+ 	<title>internal and external js</title>
+	<script>
+	function internalfunction(){
+		alert("this is an internal js function");
+	}
+	</script>
+</head>
+<body>
+	<h1>js integration example</h1>
+	<button onclick="internalfunction()">click for internal js</button>
+	<button onclick="externalfunction()">click for external js</button>
+	<script src="script6a.js"></script>
+</body>
+</html>

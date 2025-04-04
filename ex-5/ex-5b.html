@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tilted Background</title>
+    <style>
+        body {
+            margin: 0;
+            height: 200vh; 
+            }
+
+        .background-image {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            width: 400px; 
+            height: 300px;
+            background: url('Batman-Logo.jpg');
+            transform: translate(-50%, -50%) rotate(10deg); 
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-image"></div>
+
+    <div style="padding: 50px; text-align: center;">
+        <h1>Scroll Down</h1>
+        <p>This is a sample page with a tilted background image.</p>
+    </div>
+
+</body>
+</html>

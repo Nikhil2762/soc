@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal and External JavaScript Example</title>
+    <!-- External JavaScript file linked -->
+    <script src="soc61external.js" defer></script>
+</head>
+<body>
+    <h1>JavaScript Example</h1>
+
+    <!-- Button to trigger internal JavaScript function -->
+    <button onclick="showMessage()">Click me for internal JS</button>
+
+    <!-- Internal JavaScript -->
+    <script>
+        // Internal JavaScript function
+        function showMessage() {
+            alert("Hello! This is internal JavaScript!");
+        }
+    </script>
+
+    <h2>External JavaScript Example:</h2>
+    <button onclick="externalFunction()">Click me for external JS</button>
+
+</body>
+</html>

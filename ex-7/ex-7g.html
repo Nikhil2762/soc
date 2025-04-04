@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <title>constructor </title>
+   </head>
+<body>
+<script>
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+
+  this.displayInfo = function() {
+    document.write(`Car: ${this.year} ${this.make} ${this.model}`);
+  };
+document.write("<br>");
+  this.getYear = function() {
+    return this.year;
+  };
+
+  this.setYear = function(newYear) {
+    this.year = newYear;
+  };
+}
+
+let myCar = new Car("Toyota", "Corolla", 2020);
+
+document.write("Car Make: " + myCar.make);
+document.write("<br>");
+myCar.displayInfo();
+document.write("<br>");
+document.write("Current Year: " + myCar.getYear());
+myCar.setYear(2023);
+document.write("<br>");
+document.write("Updated Year: " + myCar.getYear());
+document.write("<br>");
+
+</script>
+
+</body>
+</html>

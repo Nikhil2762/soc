@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Object Looping</title>
+    <script>
+        function loopThroughObject() {
+            let person = {
+                name: "DIET",
+                age: 16,
+                city: "Vijayawada"
+            };
+
+            let output = "Using for-in loop: <br>";
+            for (let key in person) {
+                output += key + ": " + person[key] + "<br>";
+            }
+
+            output += "<br>Using forEach loop (iterating over object properties): <br>";
+            Object.entries(person).forEach(([key, value]) => {
+                output += key + ": " + value + "<br>";
+            });
+
+            output += "<br>Using for-of loop (iterating over object entries): <br>";
+            for (const [key, value] of Object.entries(person)) {
+                output += key + ": " + value + "<br>";
+            }
+
+            document.getElementById("output").innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+    <button onclick="loopThroughObject()">Loop Through Object</button>
+    <div id="output"></div>
+</body>
+</html>

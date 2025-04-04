@@ -1,0 +1,32 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaScript Output Methods</title>
+</head>
+<body>
+
+    <h2>JavaScript Input & Output Methods</h2>
+    <p id="output"></p>
+<br>
+    <input type="text" id="userInput" placeholder="Enter something">
+    <button onclick="getInput()">Submit</button>
+    <script>
+	 let name = prompt("Enter your name:");
+                  console.log("Hello, " + name);
+       
+ 	document.getElementById("output").innerHTML = "Entered name is "+name;
+	document.write ("<br>");
+       	document.write("using document.write "+ name);
+       	console.warn("This is a warning message.");
+        	console.error("This is an error message.");
+
+ function getInput() {
+            let input = document.getElementById("userInput").value;
+            console.log("User entered: " + input);
+        }
+    
+    </script>
+
+</body>
+</html>

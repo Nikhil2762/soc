@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Input Methods</title>
+</head>
+<body>
+    <h1>Different Ways to Take Input in JavaScript</h1>
+
+    <!-- Method 1: Using window.prompt() -->
+    <button onclick="usePrompt()">Prompt for Name</button>
+    
+    <p id="promptOutput"></p>
+
+    <hr>
+
+    <!-- Method 2: Using HTML Input field -->
+    <label for="textInput">Enter some text:</label>
+    <input type="text" id="textInput" placeholder="Type here">
+    <button onclick="getInputValue()">Get Text Input</button>
+    <p id="inputValueOutput"></p>
+
+    <hr>
+
+    <!-- Method 3: Using HTML Form Input -->
+    <form id="formInput">
+        <label for="formInputField">Enter your favorite color:</label>
+        <input type="text" id="formInputField">
+        <button type="submit">Submit</button>
+    </form>
+    <p id="formOutput"></p>
+
+    <hr>
+
+    <!-- Method 4: Using HTML Select Dropdown -->
+    <label for="dropdownInput">Select a fruit:</label>
+    <select id="dropdownInput">
+        <option value="Apple">Apple</option>
+        <option value="Banana">Banana</option>
+        <option value="Cherry">Cherry</option>
+    </select>
+    <button onclick="getDropdownValue()">Get Selected Fruit</button>
+    <p id="dropdownOutput"></p>
+
+    <hr>
+
+    <!-- Method 5: Using HTML Checkbox -->
+    <label for="checkboxInput">Do you like JavaScript?</label>
+    <input type="checkbox" id="checkboxInput">
+    <button onclick="getCheckboxValue()">Check if selected</button>
+    <p id="checkboxOutput"></p>
+
+    <hr>
+
+    <!-- Method 6: Using HTML Radio buttons -->
+    <label>Choose your favorite color:</label><br>
+    <input type="radio" name="color" value="Red" id="colorRed"> Red
+    <input type="radio" name="color" value="Green" id="colorGreen"> Green
+    <input type="radio" name="color" value="Blue" id="colorBlue"> Blue
+    <button onclick="getRadioValue()">Get Selected Color</button>
+    <p id="radioOutput"></p>
+
+    <script>
+        // Method 1: Using window.prompt()
+        function usePrompt() {
+            var userName = window.prompt("Please enter your name:", "John Doe");
+            if (userName) {
+                document.getElementById("promptOutput").innerHTML = "Hello, " + userName + "!";
+            } else {
+                document.getElementById("promptOutput").innerHTML = "No name entered.";
+            }
+        }
+
+        // Method 2: Using HTML Input field
+        function getInputValue() {
+            var userInput = document.getElementById("textInput").value;
+            document.getElementById("inputValueOutput").innerHTML = "You entered: " + userInput;
+        }
+
+        // Method 3: Using HTML Form Input
+        document.getElementById("formInput").addEventListener("submit", function(event) {
+            event.preventDefault();  // Prevent form submission
+            var formInputValue = document.getElementById("formInputField").value;
+            document.getElementById("formOutput").innerHTML = "Your favorite color is: " + formInputValue;
+        });
+
+        // Method 4: Using HTML Select Dropdown
+        function getDropdownValue() {
+            var selectedFruit = document.getElementById("dropdownInput").value;
+            document.getElementById("dropdownOutput").innerHTML = "You selected: " + selectedFruit;
+        }
+
+        // Method 5: Using HTML Checkbox
+        function getCheckboxValue() {
+            var isChecked = document.getElementById("checkboxInput").checked;
+            if (isChecked) {
+                document.getElementById("checkboxOutput").innerHTML = "You like JavaScript!";
+            } else {
+                document.getElementById("checkboxOutput").innerHTML = "You don't like JavaScript.";
+            }
+        }
+
+        // Method 6: Using HTML Radio buttons
+        function getRadioValue() {
+            var radios = document.getElementsByName("color");
+            var selectedColor = null;
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    selectedColor = radios[i].value;
+                    break;
+                }
+            }
+            if (selectedColor) {
+                document.getElementById("radioOutput").innerHTML = "Your favorite color is: " + selectedColor;
+            } else {
+                document.getElementById("radioOutput").innerHTML = "No color selected.";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>JavaScript Output Methods</title>
+</head>
+<body>
+
+	<h2>JavaScript Output Methods</h2>
+    <p id="output"></p>
+
+    <script>
+	console.log("This is a console log message.");
+        	alert("This is an alert box!");
+	document.getElementById("output").innerHTML = "Welcome to CSE-A students";
+	document.write("This is written using document.write().");
+	console.warn("This is a warning message.");
+ 	console.error("This is an error message.");
+    </script>
+
+</body>
+</html>

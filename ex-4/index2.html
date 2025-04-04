@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector Example</title>
+</head>
+<style>
+    div,p{
+        font-size: 18px;
+    }
+    div > p{
+        color: green;
+    }
+    h2 + p{
+        font-size: 20px;
+    }
+    h2 ~ p{
+        color: purple;
+    }
+    a:hover{
+        color: green;
+    }
+</style>
+<body>
+    <h1>Welcome to CSS Selectors!</h1>
+    <p>This is  a sample text.</p>
+    <p>This paragraph has a class "highlight"</p>
+    <div>
+        <p>This is a paragraph inside a div</p>
+        <p>This is another paragraph inside the div</p>
+    </div>
+    <h2>Heading with sibling</h2>
+    <p>This paragraph is adjacent to h2</p>
+    <p>This paragraph is a general sibling of the h2</p>
+    <a href="https://www.google.com">Visit Google</a><br>
+    <a href="https://www.example.com">Visit Example</a><br>
+</body>
+</html>

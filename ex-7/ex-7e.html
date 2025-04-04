@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <title>RegExp object </title>
+   </head>
+<body>
+<script>
+let pattern = /JavaScript/i; 
+
+let result = pattern.test("I love JavaScript");
+document.write("Pattern matches: " + result);
+document.write("<br>");
+
+let matchResult = "I love JavaScript".match(pattern);
+document.write("Match result: " + matchResult);
+document.write("<br>");
+
+let execResult = pattern.exec("I love JavaScript and JavaScript is awesome.");
+document.write("Exec result: " + execResult);
+document.write("<br>");
+
+</script>
+
+</body>
+</html>

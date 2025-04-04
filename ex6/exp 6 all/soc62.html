@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Output Methods</title>
+</head>
+<body>
+    <h1>JavaScript Output Methods Example</h1>
+
+    <p id="innerHTMLExample">This is the original text inside the paragraph.</p>
+
+    <button onclick="useAlert()">Use Alert</button>
+    <button onclick="useDocumentWrite()">Use Document Write</button>
+    <button onclick="useConsoleLog()">Use Console Log</button>
+    <button onclick="useInnerHTML()">Change Inner HTML</button>
+    <button onclick="usePrint()">Use Print</button>
+    <button onclick="usePrompt()">Use Prompt</button>
+
+    <script>
+        // Method 1: Using window.alert() to show a message in a pop-up
+        function useAlert() {
+            window.alert("This is an alert message!");
+        }
+
+        // Method 2: Using document.write() to write content to the page
+        function useDocumentWrite() {
+            document.write("<h2>This is written to the document using document.write()!</h2>");
+        }
+
+        // Method 3: Using console.log() to log a message to the browser console
+        function useConsoleLog() {
+            alert("Console.log function is being called!");
+            console.log("This is a log message in the browser's console.");
+        }
+
+        // Method 4: Using innerHTML to change the content of a webpage element
+        function useInnerHTML() {
+            document.getElementById("innerHTMLExample").innerHTML = "This content has been updated using innerHTML!";
+        }
+
+        // Method 5: Using window.print() to open the print dialog
+        function usePrint() {
+            window.print();  // This opens the print dialog to print the webpage
+        }
+
+        // Method 6: Using window.prompt() to get input from the user
+        function usePrompt() {
+            var userResponse = window.prompt("What is your name?", "John Doe");
+            if (userResponse != null) {
+                console.log("User's name is: " + userResponse);  // Display user's name in the console
+            } else {
+                console.log("User canceled the prompt.");
+            }
+        }
+    </script>
+</body>
+</html>
