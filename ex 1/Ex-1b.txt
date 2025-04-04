@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>HTML Hyperlinks</title>
+</head>
+<body>
+
+<h1>Working of Hyperlinks in HTML</h1>
+
+<p>Hyperlinks are created using the 
+<code>&lt;a&gt;</code> tag. The 
+<code>href</code> attribute defines the URL of
+ the page the link goes to. You can also use the 
+<code>target</code> attribute to specify where the
+ link will open. Here are some examples:</p>
+
+<h2>1. Basic Hyperlink</h2>
+<a href="https://www.example.com">Visit Example.com
+</a>
+
+<h2>2. Link to a Specific Section on the Same Page
+</h2>
+<a href="#section1">Go to Section 1</a>
+
+<h2>3. Hyperlink with target Attribute</h2>
+<p>The <code>target="_blank"</code> attribute opens the
+ link in a new tab:</p>
+<a href="https://www.example.com" target="_blank">
+Open Example.com in a new tab</a>
+
+<h2>4. Internal Link (Same Page)</h2>
+<p>This is a link to an internal section of the page:
+</p>
+<a href="#section2">Go to Section 2</a>
+
+<h2>5. Hyperlink to an Email Address</h2>
+<p>You can also create a link that opens the user's
+ email client:</p>
+<a href="mailto:someone@example.com">Send Email</a>
+
+</body>
+</html>

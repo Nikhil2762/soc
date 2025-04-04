@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Image Gallery with Thumbnails</title>
+</head>
+<body>
+
+<h1>Image Gallery</h1>
+<p>Click on any thumbnail to view the full-size image.</p>
+
+<div class="gallery">
+    <a href="images/image1.jpg" target="_blank">
+        <img src="images/image1_thumb.jpg" alt="Image 1">
+    </a>
+    <a href="images/image2.jpg" target="_blank">
+        <img src="images/image2_thumb.jpg" alt="Image 2">
+    </a>
+    <a href="images/image3.jpg" target="_blank">
+        <img src="images/image3_thumb.jpg" alt="Image 3">
+    </a>
+    <a href="images/image4.jpg" target="_blank">
+        <img src="file:///C:/Users/DE-LAB/Desktop/2023%20Chevrolet%20Colorado%20SUV%20in%20full%20black%20and%20fully%20modified%20-%20Search%20Images_files/2023-Chevy-Colorado-Black-825x454.jpg" alt="Image 4">
+    </a>
+</div>
+
+</body>
+</html>
